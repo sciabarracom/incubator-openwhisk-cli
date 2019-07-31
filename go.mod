@@ -2,7 +2,7 @@ module github.com/apache/incubator-openwhisk-cli
 
 go 1.12
 
-replace github.com/apache/incubator-openwhisk-cli/wski18n => ./wski18n
+replace github.com/apache/incubator-openwhisk-cli/wski18n => github.com/sciabarracom/incubator-openwhisk-cli/wski18n generated-i18n
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
