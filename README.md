@@ -110,41 +110,19 @@ functional OpenWhisk environment.
 Make sure that you have [Go installed](https://golang.org/doc/install), and `$GOPATH` is defined in your [Go development
 environment](https://golang.org/doc/code.html).
 
-Then download the source code of the OpenWhisk CLI and the dependencies by
-typing:
+In general you can build the cli using just 
 
-```
-$ cd $GOPATH
-$ go get github.com/apache/openwhisk-cli
-$ cd $GOPATH/src/github.com/apache/openwhisk-cli
-```
+`go get github.com/apache/openwhisk-cli -o wsk`
 
-The CLI internationalization should be generated dynamically using the
-bindata tool:
+If you want to compile locally from sources after git clone just cd into the cloned directory.
 
-```
-$ go get -u github.com/jteeuwen/go-bindata/...
-$ go-bindata -pkg wski18n -o wski18n/i18n_resources.go wski18n/resources
-```
+Make sure that either your source code is outside of GOPATH, or explicitly enable Go modules  with `export GO111MODULE=on`
 
-The project includes a `vendor/vendor.json` and you can lock down
-dependencies for a clean build of the CLI by populating the `vendor` folder.
+Build with `go build -o wsk`
 
-```
-$ go get -u github.com/kardianos/govendor         # Install govendor tool
-$ govendor sync     # Download and install packages with specified dependencies.
-```
+If change resources you have to update the resouces with
 
-NOTE: As a temporary workaround, you have to remove a redundant instance of `spf13/cobra`
-in the vendor folder. See this [issue](https://github.com/apache/openwhisk-cli/issues/398) for details.
-```
-$ rm -rf vendor/github.com/spf13
-```
-
-Now you can build the binary.
-```
-$ go build -o wsk
-```
+`go generate`
 
 If you would like to build the binary for a specific operating system, you may
 add the arguments `GOOS` and `GOARCH` into the Go build command. `GOOS` can

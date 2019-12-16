@@ -17,6 +17,9 @@
 
 package main
 
+//go:generate go get -u github.com/jteeuwen/go-bindata@v3.0.7
+//go:generate go-bindata -pkg wski18n -o wski18n/i18n_resources.go wski18n/resources
+
 import (
 	"fmt"
 	goi18n "github.com/nicksnyder/go-i18n/i18n"
