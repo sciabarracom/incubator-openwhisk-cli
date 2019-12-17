@@ -1,8 +1,8 @@
 module github.com/apache/openwhisk-cli
 
-go 1.12
+go 1.13
 
-replace "github.com/apache/openwhisk-cli/wski18n" => "wski18n"
+replace "github.com/apache/openwhisk-cli/wski18n" => "./wski18n"
 
 require (
 	github.com/apache/openwhisk-client-go v0.0.0-20190808181516-d8ccb1442651
