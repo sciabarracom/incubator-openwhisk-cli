@@ -32,4 +32,6 @@ require (
 	gopkg.in/yaml.v2 v2.2.2
 )
 
+
 replace github.com/apache/openwhisk-cli/wski18n => ./wski18n
+replace github.com/apache/openwhisk-cli/commands => ./commands
