@@ -2,8 +2,6 @@ module github.com/apache/openwhisk-cli
 
 go 1.13
 
-replace github.com/apache/openwhisk-cli/wski18n => ./wski18n
-
 require (
 	github.com/apache/openwhisk-client-go v0.0.0-20190808181516-d8ccb1442651
 	github.com/apache/openwhisk-wskdeploy v0.0.0-20190809160447-cbe7c52d99c1
@@ -33,3 +31,5 @@ require (
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7
 	gopkg.in/yaml.v2 v2.2.2
 )
+
+replace github.com/apache/openwhisk-cli/wski18n => ./wski18n
