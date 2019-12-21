@@ -1,4 +1,4 @@
-module github.com/sciabarracom/openwhisk-cli/commands
+module github.com/apache/openwhisk-cli/commands
 
 go 1.13
 
